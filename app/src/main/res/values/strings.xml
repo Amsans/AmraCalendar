@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Amra Calendar</string>
+    <string name="set_the_date">Set the Date</string>
+    <string name="select_date">Select date</string>
+    <string name="switch_dates">Switch dates</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="calculate_heliadas">Calculate heliadas</string>
+    <string name="plus">+</string>
+</resources>
