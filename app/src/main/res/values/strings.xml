@@ -2,8 +2,13 @@
     <string name="app_name">Amra Calendar</string>
     <string name="set_the_date">Set the Date</string>
     <string name="select_date">Select date</string>
-    <string name="switch_dates">Switch dates</string>
+    <string name="heliada_date">Heliada date</string>
+    <string name="amra_flower">Amra</string>
     <string name="pick_date">Pick Date</string>
     <string name="calculate_heliadas">Calculate heliadas</string>
     <string name="plus">+</string>
+    <string name="equals">=</string>
+    <string name="tut_date">TUT date</string>
+    <string name="heliada_tut_format">Heliada TF</string>
+    <string name="heliada_common_format">Heliada CF</string>
 </resources>
