@@ -22,12 +22,11 @@ public class DateConverterService {
     public static final int CALENDAR_BASIS = 1110;
     // Roman like (XX).(I).(II).(IV)
     public static final String TUT_FORMAT_REGEX = "(M{0,4}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3}))" +
-                                           "\\.((?:X{0,1})(?:IX|IV|V?I{0,3}))" +
-                                           "\\.((?:X{0,1})(?:IX|IV|V?I{0,3}))" +
-                                           "\\.((?:X{0,1})(?:IX|IV|V?I{0,3}))";
+            "\\.((?:X{0,1})(?:IX|IV|V?I{0,3}))" +
+            "\\.((?:X{0,1})(?:IX|IV|V?I{0,3}))" +
+            "\\.((?:X{0,1})(?:IX|IV|V?I{0,3}))";
 
     public String convertToTUT(String stringToConvert) {
-        System.out.println(stringToConvert);
         LocalDate dateToConvert = LocalDate.parse(stringToConvert, FORMATTER);
         return convertToTUT(dateToConvert);
     }
@@ -35,15 +34,8 @@ public class DateConverterService {
     public String convertToTUT(LocalDate dateToConvert) {
         LocalDate baseDate = LocalDate.parse(TUT_FOUNDATION_DATE, FORMATTER);
         long numberOfDays = ChronoUnit.DAYS.between(baseDate, dateToConvert) + 1;
-
-        System.out.println(numberOfDays);
-
         long baseValue = numberOfDays + CALENDAR_BASIS;
-        String formattedDate = convertToTUTFormat(String.valueOf(baseValue));
-
-        System.out.println(formattedDate);
-
-        return formattedDate;
+        return convertToTUTFormat(String.valueOf(baseValue));
     }
 
     private String convertToTUTFormat(String days) {
@@ -106,9 +98,7 @@ public class DateConverterService {
             digits = format("%1$d%2$d%3$d%4$d", chiliad, hecatontade, decade, dayOfDecade);
         }
         long parsedDigits = Long.parseLong(digits);
-        System.out.println("Parsed " + parsedDigits);
         long days = parsedDigits - CALENDAR_BASIS;
-        System.out.println("Days " + days);
         LocalDate baseDate = LocalDate.parse(TUT_FOUNDATION_DATE, FORMATTER);
         LocalDate dateInCommonFormat = baseDate.plusDays(days - 1);
 
