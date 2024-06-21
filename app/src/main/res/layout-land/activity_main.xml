@@ -39,13 +39,14 @@
         android:autofillHints="false"
         android:gravity="center"
         android:padding="10dp"
-        android:inputType="date"
+        android:inputType="text"
         android:maxLines="1"
         android:hint="@string/tut_date"
         android:textIsSelectable="true"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextFields" />
 
     <View
         android:layout_height="match_parent"
