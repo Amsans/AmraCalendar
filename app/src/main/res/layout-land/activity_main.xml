@@ -6,47 +6,72 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/commonDateInput"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:hint="@string/select_date"
-        android:autofillHints="false"
-        android:layout_gravity="center"
-        android:inputType="date"
-        android:padding="10dp"
-        android:focusable="false"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/idBtnSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:contentDescription="@string/amra_flower"
-        android:padding="16dp"
-        android:textAllCaps="false" />
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/date_converter"
+            android:textColor="@color/dark_primary"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/tutDateInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="40dp"
-        android:autofillHints="false"
-        android:gravity="center"
-        android:padding="10dp"
-        android:inputType="text"
-        android:maxLines="1"
-        android:hint="@string/tut_date"
-        android:textIsSelectable="true"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:ignore="TextFields" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp" >
+
+            <EditText
+                android:id="@+id/commonDateInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:hint="@string/select_date"
+                android:autofillHints="false"
+                android:layout_gravity="center"
+                android:inputType="date"
+                android:padding="10dp"
+                android:focusable="false"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/idBtnSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/amra_flower"
+                android:padding="16dp"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/tutDateInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="40dp"
+                android:autofillHints="false"
+                android:gravity="center"
+                android:padding="10dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/tut_date"
+                android:textIsSelectable="true"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="TextFields" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 
     <View
         android:layout_height="match_parent"
@@ -121,14 +146,13 @@
                     android:id="@+id/chiliadsInCommon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="75dp"
                     android:gravity="center"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     android:hint="@string/chiliad_common_format"
                     android:textAlignment="center"
                     android:textIsSelectable="true"
                     android:textSize="20sp"
-                    android:textColor="@color/dark_primary"
                     android:textStyle="bold" />
 
                 <TextView
@@ -137,12 +161,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     android:hint="@string/chiliad_tut_format"
                     android:textAlignment="center"
                     android:textIsSelectable="true"
                     android:textSize="20sp"
-                    android:textColor="@color/dark_primary"
                     android:textStyle="bold" />
 
             </LinearLayout>

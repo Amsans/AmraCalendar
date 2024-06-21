@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Amra Calendar</string>
-    <string name="set_the_date">Set the Date</string>
     <string name="select_date">Select date</string>
     <string name="chiliad_date">Chiliad date</string>
     <string name="amra_flower">Amra</string>
     <string name="pick_date">Pick Date</string>
     <string name="calculate_chiliads">Calculate heliadas</string>
-    <string name="plus">+</string>
-    <string name="equals">=</string>
+    <string name="date_converter">Date converter</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="equals" translatable="false">=</string>
     <string name="tut_date">TUT date</string>
-    <string name="chiliad_tut_format">Chiliad TF</string>
-    <string name="chiliad_common_format">Chiliad CF</string>
+    <string name="chiliad_tut_format" translatable="false">Chiliad TF</string>
+    <string name="chiliad_common_format" translatable="false">Chiliad CF</string>
 </resources>

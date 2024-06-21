@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amra Calendar</string>
+    <string name="select_date">Абраць дату</string>
+    <string name="chiliad_date">Дата хіліяды</string>
+    <string name="amra_flower">Амра</string>
+    <string name="pick_date">Дата</string>
+    <string name="calculate_chiliads">Падлік хіліяды</string>
+    <string name="tut_date">Дата ВАХ</string>
+    <string name="date_converter">Канвертар дат</string>
+</resources>

@@ -6,11 +6,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/date_converter"
+        android:textAlignment="center"
+        android:textColor="@color/dark_primary"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/commonDateInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:hint="@string/select_date"
         android:autofillHints="false"
         android:layout_gravity="center"
@@ -59,19 +67,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/calculate_chiliads"
+        android:textColor="@color/dark_primary"
         android:textAlignment="center"
         android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
 
         <EditText
             android:id="@+id/chiliadDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="10dp"
             android:autofillHints="true"
@@ -79,7 +89,7 @@
             android:gravity="center"
             android:hint="@string/chiliad_date"
             android:inputType="date"
-            android:padding="10dp"
+            android:padding="5dp"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -119,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="70dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:hint="@string/chiliad_common_format"
                 android:textAlignment="center"
                 android:textIsSelectable="true"
@@ -132,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:hint="@string/chiliad_tut_format"
                 android:textAlignment="center"
                 android:textIsSelectable="true"
