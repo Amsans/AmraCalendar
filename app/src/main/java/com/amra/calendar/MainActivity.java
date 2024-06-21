@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText commonDateInput;
     private EditText tutDateInput;
-    private EditText heliadaDate;
-    private NumberPicker heliadaUpDown;
-    private TextView heliadasInCommon;
-    private TextView heliadasInTUT;
+    private EditText chiliadDate;
+    private NumberPicker chiliadUpDown;
+    private TextView chiliadInCommon;
+    private TextView chiliadInTUT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,39 +92,39 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        heliadasInCommon = findViewById(R.id.heliadasInCommon);
-        heliadasInTUT = findViewById(R.id.heliadasInTUT);
-        heliadaUpDown = findViewById(R.id.heliadaUpDown);
-        heliadaUpDown.setMinValue(1);
-        heliadaUpDown.setMaxValue(999);
-        heliadaUpDown.setValue(1);
-        heliadaUpDown.setOnValueChangedListener((picker, oldVal, newVal) -> {
-            LocalDate heliadaDate = LocalDate.parse(this.heliadaDate.getText(), FORMATTER);
-            calculateHeliadas(heliadaDate);
+        chiliadInCommon = findViewById(R.id.chiliadsInCommon);
+        chiliadInTUT = findViewById(R.id.chiliadsInTUT);
+        chiliadUpDown = findViewById(R.id.chiliadUpDown);
+        chiliadUpDown.setMinValue(1);
+        chiliadUpDown.setMaxValue(999);
+        chiliadUpDown.setValue(1);
+        chiliadUpDown.setOnValueChangedListener((picker, oldVal, newVal) -> {
+            LocalDate chiliadDate = LocalDate.parse(this.chiliadDate.getText(), FORMATTER);
+            calculateChiliads(chiliadDate);
         });
-        calculateHeliadas(today);
+        calculateChiliads(today);
 
-        heliadaDate = findViewById(R.id.heliadaDate);
-        heliadaDate.setText(today.format(FORMATTER));
-        heliadaDate.setOnClickListener(v -> {
-            LocalDate heliadaDate = LocalDate.parse(this.heliadaDate.getText(), FORMATTER);
+        chiliadDate = findViewById(R.id.chiliadDate);
+        chiliadDate.setText(today.format(FORMATTER));
+        chiliadDate.setOnClickListener(v -> {
+            LocalDate chiliadDate = LocalDate.parse(this.chiliadDate.getText(), FORMATTER);
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     this,
                     (view, year, monthOfYear, dayOfMonth) -> {
                         LocalDate date = LocalDate.of(year, monthOfYear + 1, dayOfMonth);
-                        this.heliadaDate.setText(date.format(FORMATTER));
-                        calculateHeliadas(date);
+                        this.chiliadDate.setText(date.format(FORMATTER));
+                        calculateChiliads(date);
                     },
-                    heliadaDate.getYear(), heliadaDate.getMonthValue() - 1, heliadaDate.getDayOfMonth());
+                    chiliadDate.getYear(), chiliadDate.getMonthValue() - 1, chiliadDate.getDayOfMonth());
             datePickerDialog.show();
         });
 
     }
 
-    private void calculateHeliadas(LocalDate date) {
-        LocalDate resultDate = date.plusDays(1000L * heliadaUpDown.getValue());
-        heliadasInCommon.setText(resultDate.format(FORMATTER));
-        heliadasInTUT.setText(service.convertToTUT(resultDate));
+    private void calculateChiliads(LocalDate date) {
+        LocalDate resultDate = date.plusDays(1000L * chiliadUpDown.getValue());
+        chiliadInCommon.setText(resultDate.format(FORMATTER));
+        chiliadInTUT.setText(service.convertToTUT(resultDate));
     }
 }

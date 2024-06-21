@@ -51,27 +51,27 @@ public class DateConverterService {
         Matcher matcher = regexp.matcher(days);
         if (matcher.find()) {
 
-            int heliadaDigit = parseInt(matcher.group(1));
-            int gekatontadaDigit = parseInt(matcher.group(2));
-            int decadaDigit = parseInt(matcher.group(3));
-            int dayOfDecadaDigit = parseInt(matcher.group(4));
+            int chiliadDigit = parseInt(matcher.group(1));
+            int hecatontadeDigit = parseInt(matcher.group(2));
+            int decadeDigit = parseInt(matcher.group(3));
+            int dayOfDecadeDigit = parseInt(matcher.group(4));
 
             // Going backwards from the last digit to the first
-            String dayOfDecada = toRoman(dayOfDecadaDigit);
-            if (dayOfDecadaDigit == 0) {
-                decadaDigit -= 1;
+            String dayOfDecade = toRoman(dayOfDecadeDigit);
+            if (dayOfDecadeDigit == 0) {
+                decadeDigit -= 1;
             }
-            String decada = toRoman(decadaDigit);
-            if (decadaDigit <= 0) {
-                gekatontadaDigit -= 1;
+            String decade = toRoman(decadeDigit);
+            if (decadeDigit <= 0) {
+                hecatontadeDigit -= 1;
             }
-            String gekatontada = toRoman(gekatontadaDigit);
-            if (gekatontadaDigit <= 0) {
-                heliadaDigit -= 1;
+            String hecatontade = toRoman(hecatontadeDigit);
+            if (hecatontadeDigit <= 0) {
+                chiliadDigit -= 1;
             }
-            String heliada = toRoman(heliadaDigit);
+            String chiliad = toRoman(chiliadDigit);
 
-            return format("%1$s.%2$s.%3$s.%4$s", heliada, gekatontada, decada, dayOfDecada);
+            return format("%1$s.%2$s.%3$s.%4$s", chiliad, hecatontade, decade, dayOfDecade);
         }
         return "";
     }
@@ -82,28 +82,28 @@ public class DateConverterService {
         String digits = "";
         if (matcher.find()) {
 
-            String heliadaDigit = matcher.group(1);
-            String gekatontadaDigit = matcher.group(2);
-            String decadaDigit = matcher.group(3);
-            String dayOfDecadaDigit = matcher.group(4);
-            int heliada = toArabic(heliadaDigit);
-            int decada = toArabic(decadaDigit);
-            int gekatontada = toArabic(gekatontadaDigit);
-            int dayOfDecada = toArabic(dayOfDecadaDigit);
-            if (gekatontada >= 10) {
-                gekatontada = 0;
-                heliada += 1;
+            String chiliadDigit = matcher.group(1);
+            String hecatontadeDigit = matcher.group(2);
+            String decadeDigit = matcher.group(3);
+            String dayOfDecadeDigit = matcher.group(4);
+            int chiliad = toArabic(chiliadDigit);
+            int decade = toArabic(decadeDigit);
+            int hecatontade = toArabic(hecatontadeDigit);
+            int dayOfDecade = toArabic(dayOfDecadeDigit);
+            if (hecatontade >= 10) {
+                hecatontade = 0;
+                chiliad += 1;
             }
-            if (decada >= 10) {
-                decada = 0;
-                gekatontada += 1;
+            if (decade >= 10) {
+                decade = 0;
+                hecatontade += 1;
             }
-            if (dayOfDecada == 10) {
-                dayOfDecada = 0;
-                decada += 1;
+            if (dayOfDecade == 10) {
+                dayOfDecade = 0;
+                decade += 1;
             }
 
-            digits = format("%1$d%2$d%3$d%4$d", heliada, gekatontada, decada, dayOfDecada);
+            digits = format("%1$d%2$d%3$d%4$d", chiliad, hecatontade, decade, dayOfDecade);
         }
         long parsedDigits = Long.parseLong(digits);
         System.out.println("Parsed " + parsedDigits);
