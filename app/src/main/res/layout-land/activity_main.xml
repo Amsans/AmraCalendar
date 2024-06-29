@@ -29,7 +29,7 @@
                 android:id="@+id/commonDateInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="10dp"
                 android:hint="@string/select_date"
                 android:autofillHints="false"
                 android:layout_gravity="center"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:contentDescription="@string/amra_flower"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:textAllCaps="false" />
 
             <EditText
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="20dp"
                 android:autofillHints="false"
                 android:gravity="center"
                 android:padding="10dp"
